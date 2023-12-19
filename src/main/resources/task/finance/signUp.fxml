@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="612.72" prefWidth="915.71" style="-fx-background-color: #2B3164;" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.finance.signUpController">
+    <children>
+        <AnchorPane layoutY="116.0" prefHeight="497.0" prefWidth="916.0" style="-fx-background-color: F9F8FD;">
+            <children>
+                <TextField fx:id="signUpName" layoutX="94.0" layoutY="45.0" prefHeight="50.0" prefWidth="338.0" promptText="Name" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </TextField>
+            <PasswordField fx:id="password_field" layoutX="514.0" layoutY="126.0" prefHeight="50.0" prefWidth="338.0" promptText="Password" style="-fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="signUpSurname" layoutX="514.0" layoutY="45.0" prefHeight="50.0" prefWidth="338.0" promptText="Surname" style="-fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <CheckBox fx:id="signUpCheckBoxWoman" layoutX="348.0" layoutY="221.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" selected="true" text="Woman">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="signUpCheckBoxMan" layoutX="522.0" layoutY="221.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" text="Man">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </CheckBox>
+              <Button fx:id="signUpButton" layoutX="404.0" layoutY="332.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="134.0" style="-fx-background-color: #B2AFC2;" text="Sign up" textFill="WHITE">
+                  <font>
+                      <Font name="Arial" size="21.0" />
+                  </font>
+              </Button>
+                
+            <TextField fx:id="login_field" layoutX="94.0" layoutY="126.0" prefHeight="50.0" prefWidth="338.0" promptText="Login" style="-fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+              <Label fx:id="messageLabel" layoutX="387.0" layoutY="273.0" prefHeight="30.0" prefWidth="247.0" textFill="RED">
+                  <font>
+                      <Font size="15.0" />
+                  </font>
+              </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="296.0" layoutY="24.0" prefHeight="82.0" prefWidth="374.0" text="WealthWise Manager" textFill="WHITE">
+            <font>
+                <Font name="Lucida Fax Regular" size="34.0" />
+            </font>
+        </Label>
+
+    </children>
+</AnchorPane>
