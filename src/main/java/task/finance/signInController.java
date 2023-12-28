@@ -56,27 +56,26 @@ public class signInController {
         user.setPassword(loginPassword);
         ResultSet result = dbHandler.getUser(user);
         int counter = 0;
-        while(true) {
-            try {
-                if (!result.next()) break;
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+        try {
+            while (result.next()) {
+                counter++;
             }
-            counter++;
-        }
-        if (counter>=1) {
-            openNewScene("/task/finance/app.fxml");
-        }
-        else {
-            messageLabel.setText("The username or password is incorrect");
+            if (counter >= 1) {
+                CurrentUserManager.setCurrentUsername(loginText);
+                openNewScene("/task/finance/app.fxml");
+            } else {
+                messageLabel.setText("The username or password is incorrect");
 
-            Shake userLoginAnim = new Shake(login_field);
-            Shake userPassAnim = new Shake(password_field);
-            userLoginAnim.playAnim();
-            userPassAnim.playAnim();
+                Shake userLoginAnim = new Shake(login_field);
+                Shake userPassAnim = new Shake(password_field);
+                userLoginAnim.playAnim();
+                userPassAnim.playAnim();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-
     }
+
     public void openNewScene(String window) {
         loginSignupButton.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
@@ -91,4 +90,5 @@ public class signInController {
         stage.setScene(new Scene(root));
         stage.showAndWait();
     }
+
 }

@@ -1,26 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="task.finance.MainController">
-<top>
-    <HBox alignment="CENTER">
-        <Label text="Обзор общего баланса и последних транзакций"/>
-    </HBox>
-</top>
-<center>
-    <!-- Добавьте компоненты для отображения баланса и последних транзакций -->
-</center>
-<bottom>
-    <HBox alignment="CENTER">
-        <Button text="Управление категориями" onAction="#openCategoryManagement"/>
-        <Button text="Планирование бюджета" onAction="#openBudgetPlanning"/>
-    </HBox>
-</bottom>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="915.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.finance.FinancialController">
+   <children>
+      <Pane layoutX="45.0" prefHeight="612.0" prefWidth="270.0" style="-fx-background-color: #2B3164;">
+         <children>
+            <Button fx:id="logOutButton" layoutX="68.0" layoutY="434.0" mnemonicParsing="false" onAction="#logOut" prefHeight="23.0" prefWidth="132.0" style="-fx-background-color: #fffff;" text="log out" textFill="#515f72">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/life-buoy.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="goToAddTransaction" layoutX="39.0" layoutY="112.0" mnemonicParsing="false" onAction="#goToAddTransaction" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: #110a4d;" text="add transaction" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Group1177.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="goToFinanceReportButton" layoutX="39.0" layoutY="164.0" mnemonicParsing="false" onAction="#goToFinanceReport" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: #110a4d;" text="financial report" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Group1177.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView fitHeight="46.0" fitWidth="78.0" layoutX="39.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/profile.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="85.0" layoutY="533.0" prefHeight="46.0" prefWidth="149.0" promptText="Login" style="-fx-background-color: #2B3164;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="34.0" layoutY="498.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="34.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Text fill="WHITE" layoutX="60.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explore">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TextField fx:id="signUpName11" layoutX="493.0" layoutY="202.0" prefHeight="61.0" prefWidth="239.0" promptText="Welcome to our app!" style="-fx-border-color: silver; -fx-border-radius: 5;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="612.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Group1179.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

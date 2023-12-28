@@ -8,3 +8,5 @@ public class Configs {
     protected String dbName = "finance";
 
 }
+
+

@@ -85,9 +85,11 @@ public class signUpController {
             gender = "Male";
         User user = new User(name, surname, username, password, gender);
         dbHandler.signUpUser(user);
+        String userId = dbHandler.getUserId(user.getUsername());
+        user.setUserId(userId);
         messageLabel.setText("Account registered successfully!");
-        PauseTransition delay = new PauseTransition(Duration.seconds(1));
-        delay.setOnFinished(event -> openNewScene("/task/finance/app.fxml"));
+        PauseTransition delay = new PauseTransition(Duration.seconds(3));
+        delay.setOnFinished(event -> openNewScene("/task/finance/signIn.fxml"));
         delay.play();
     }
 

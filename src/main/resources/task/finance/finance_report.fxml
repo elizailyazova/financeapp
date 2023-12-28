@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="addTransaction" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="915.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.finance.FinancialController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="915.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.finance.FinancialReportController">
    <children>
       <Pane layoutX="45.0" prefHeight="612.0" prefWidth="270.0" style="-fx-background-color: #2B3164;">
          <children>
-            <Button fx:id="signUpButton" layoutX="68.0" layoutY="434.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="132.0" style="-fx-background-color: #ffffff;" text="log out" textFill="#515f72">
+            <Button fx:id="logOutButton" layoutX="68.0" layoutY="434.0" mnemonicParsing="false" onAction="#logOut" prefHeight="23.0" prefWidth="132.0" style="-fx-background-color: #ffffff;" text="log out" textFill="#515f72">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
@@ -73,42 +69,7 @@
             <Image url="@images/Group1179.png" />
          </image>
       </ImageView>
-      <VBox layoutX="465.0" layoutY="108.0" prefHeight="321.0" prefWidth="288.0" spacing="10.0">
-         <children>
-            <Label text="Financial Entry Form" />
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Entry Type" />
-                  <ComboBox fx:id="entryTypeComboBox" />
-               </children>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Category" />
-                  <ComboBox fx:id="categoryComboBox" />
-               </children>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Subcategory" />
-                  <ComboBox fx:id="subcategoryComboBox" />
-               </children>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Date" />
-                  <DatePicker fx:id="dateDatePicker" />
-               </children>
-            </HBox>
-            <HBox spacing="10.0">
-               <children>
-                  <Label text="Amount" />
-                  <TextField fx:id="amountTextField" />
-               </children>
-            </HBox>
-            <Button fx:id="addEntryButton" onAction="#addFinancialEntry" text="Add Entry" />
-            <Button fx:id="goToFinanceReportButton" onAction="#goToFinanceReport" text="View Finance Report" />
-         </children>
-      </VBox>
+      <TreeView fx:id="financeTreeView" layoutX="337.0" layoutY="24.0" prefHeight="552.0" prefWidth="556.0" />
    </children>
+   
 </AnchorPane>

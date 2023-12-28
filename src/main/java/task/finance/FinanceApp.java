@@ -6,9 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 
-
 public class FinanceApp extends Application {
-    @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("signIn.fxml"));
         primaryStage.setTitle("Finance App");
@@ -20,3 +18,4 @@ public class FinanceApp extends Application {
         launch(args);
     }
 }
+
