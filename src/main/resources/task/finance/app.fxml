@@ -19,7 +19,7 @@
    <children>
       <Pane layoutX="45.0" prefHeight="612.0" prefWidth="270.0" style="-fx-background-color: #2B3164;">
          <children>
-            <Button fx:id="signUpButton" layoutX="68.0" layoutY="434.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="132.0" style="-fx-background-color: #ffffff;" text="log out" textFill="#515f72">
+            <Button fx:id="logOutButton" layoutX="68.0" layoutY="434.0" mnemonicParsing="false" onAction="#logOut" prefHeight="23.0" prefWidth="132.0" style="-fx-background-color: #ffffff;" text="log out" textFill="#515f72">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
